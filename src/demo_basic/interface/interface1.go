@@ -2,6 +2,7 @@ package interfaces
 import (
 	"fmt"
 	"strconv"
+	"sort"
 )
 
 type Human struct {
@@ -135,6 +136,11 @@ func Main4() {
 	}
 }
 
+type Interface interface  {
+	sort.Interface
+	Push(x interface{})
+	Pop()interface{}
+}
 
 
 
