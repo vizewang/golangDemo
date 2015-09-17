@@ -112,3 +112,4 @@ func Main6()  {
 	ThrowsPanic(Main5)
 
 }
+

@@ -1,7 +1,6 @@
 package main
 import (
-	"demo_basic/test"
-	"fmt"
+	"demo_basic/interface"
 )
 func main() {
 //	test.Test1()
@@ -14,7 +13,13 @@ func main() {
 //	test.Main3()
 //	test.Main4()
 //	test.Main5()
-	fmt.Println(test.ThrowsPanic(test.Main5))
+//	fmt.Println(test.ThrowsPanic(test.Main5))
+//	test.Main9()
+//	test.Main7()
+//	test.Main10()
+//	test1.Main1()
+//	interfaces.Main3()
+	interfaces.Main4()
 }
 
 
