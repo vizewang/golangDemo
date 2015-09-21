@@ -38,13 +38,19 @@ func main()  {
 //		return
 //	}
 //	fmt.Println(f)
-	b()
+//	b()
+	s:=[...][2]string{{"a","b"},{"c","d"}}
+	b:=s
+	for _,v:=range b{
+		fmt.Println(v[1],v[0])
+	}
 }
+
 
 func test()  {
 	var p *[]int  =new ([]int)
-	var v []int=make([]int,100)
-	var p *[]int=new ([]int)
+//	var v []int=make([]int,100)
+//	var p *[]int=new ([]int)
 *p=make([]int,100,100)
 }
 func trace(s string)string  {
