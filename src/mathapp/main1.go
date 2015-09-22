@@ -40,7 +40,9 @@ func test2()  {
 }
 var slice=[]byte{'a','b','c','s'}
 
-func main() {
-	fmt.Printf("Hello, world or 你好，世界 or καλημ ́ρα κóσμ or こんにちはせかい\n")
-	test2()
+
+func main()  {
+	str:=`hello
+	world`
+	fmt.Println(str)
 }
