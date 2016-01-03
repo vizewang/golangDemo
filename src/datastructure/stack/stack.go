@@ -7,7 +7,7 @@ type Stack struct {
 }
 
 func NewStack() *Stack {
-list:=list.New()
+	list := list.New()
 	return &Stack{list}
 }
 
@@ -15,24 +15,24 @@ func (stack *Stack)Push(value interface{}) {
 	stack.list.PushBack(value)
 }
 
-func (stack *Stack) Pop()interface{} {
-	e:=stack.list.Back()
-	if e!=nil{
+func (stack *Stack) Pop() interface{} {
+	e := stack.list.Back()
+	if e!=nil {
 		stack.list.Remove(e)
 		return e.Value
 	}
 	return nil
 }
 
-func (stack *Stack) Peak()interface{} {
-	e:=stack.list.Back()
-	if e!=nil{
+func (stack *Stack) Peak() interface{} {
+	e := stack.list.Back()
+	if e!=nil {
 		return e.Value
 	}
 	return nil
 }
 
-func (stack *Stack)Len()int {
+func (stack *Stack)Len() int {
 	return stack.list.Len()
 }
 
