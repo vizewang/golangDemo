@@ -34,7 +34,9 @@ func (this *BinTreeNode)GetParent() *BinTreeNode {
 	}
 	return this.parent
 }
-
+func (this *BinTreeNode) IsLeaf() bool {
+	return !this.HasLChild() && !this.HasRChild()
+}
 func (this *BinTreeNode) setParent(p *BinTreeNode) {
 	this.parent=p
 }
