@@ -3,11 +3,11 @@ import (
 	"fmt"
 )
 
-type heapArray  []int
+type heapArray  interface {}
 
-func NewBigHeap() *heapArray {
-	h:=make(heapArray,0,10)
-	return &h
+func NewBigHeap() heapArray {
+	h:=make(interface{},0,10)
+	return h
 }
 
 func (this *heapArray)Insert(value int) {
@@ -32,6 +32,7 @@ func heapUp(this *heapArray, index int) {
 }
 
 func (this *heapArray)Delete(index int) {
+
 	*this=append(*this[:index],*this[index+1:]...)
 
 	*this=append(*this[:len(*this)-1])
