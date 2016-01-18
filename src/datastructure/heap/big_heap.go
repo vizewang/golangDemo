@@ -33,7 +33,6 @@ func heapUp(this *heapArray, index int) {
 
 func (this *heapArray)Delete(index int) {
 	*this=append(*this[:index],*this[index+1:]...)
-
 	*this=append(*this[:len(*this)-1])
 }
 
