@@ -58,9 +58,33 @@ func Demo5()  {
 	}
 	fmt.Println(products);
 }
+func Demo6()  {
+	s:=[]string{"M","N","O","P","Q","R"}
+	x:=insertStringSliceCopy(s,[]string{"a","b","c"},0)
+	y:=insertStringSliceCopy(s,[]string{"x","y"},3)
+	z:=insertStringSliceCopy(s,[]string{"z"},len(s))
+	fmt.Println("%v\n%v\n%v\n%v\n",s,x,y,z)
+}
+
+func Demo7()  {
+	massForPlanet:=make(map[string]float64)
+	massForPlanet["Mercury"]=0.06
+	massForPlanet["Venus"]=0.82
+	massForPlanet["Earth"]=1
+	massForPlanet["Mars"]=0.11
+	fmt.Println(massForPlanet)
+}
 func swapAndProduct2(x,y int)(int,int,int)  {
 	if x>y{
 		x,y=y,x
 	}
 	return x,y,x*y
+}
+
+func insertStringSliceCopy(slice,insertion []string,index int)[]string {
+	result:=make([]string,len(slice)+len(insertion))
+	at:=copy(result,slice[:index])
+	at+=copy(result[at:],insertion)
+	copy(result[at:],slice[index:])
+	return result
 }

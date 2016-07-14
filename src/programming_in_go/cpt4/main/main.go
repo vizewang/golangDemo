@@ -3,5 +3,5 @@ package main
 import "programming_in_go/cpt4/others"
 
 func main()  {
-	others.Demo5()
+	others.Demo7()
 }
