@@ -1,0 +1,6 @@
+package others
+
+
+func PipeDemo() {
+
+}

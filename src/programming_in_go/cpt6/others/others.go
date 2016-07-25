@@ -24,3 +24,25 @@ func processPhrases(phrases []string, function RuneForRuneFunc) {
 		fmt.Println(strings.Map(function,phrase))
 	}
 }
+
+type Place struct  {
+	latitude,longitude float64
+	Name string
+}
+
+func New(latitude, longitude float64, name string) *Place {
+	return &Place{latitude,longitude,name}
+}
+func (place *Place) Latitude() float64 {
+	return place.latitude
+}
+func (place *Place) SetLatitude(latitude float64) {
+	place.latitude=latitude;
+}
+func (place *Place) Longitude()float64{
+	return place.longitude
+}
+func (place *Place) SetLongitude(longitude float64) {
+	place.longitude=longitude
+}
+
