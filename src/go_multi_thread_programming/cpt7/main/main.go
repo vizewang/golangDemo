@@ -5,13 +5,16 @@ import (
 	"time"
 	"runtime"
 	//"go_multi_thread_programming/cpt7/others"
+	//"go_multi_thread_programming/cpt7/struct_demo"
 )
 
 func main() {
 	//Demo1()
 	//Demo4()
 	//others.PersonHandlerDemo()
-	Demo6()
+	//Demo6()
+	//struct_demo.StructDemo()
+	ClosureDemo()
 }
 
 func Demo1() {
@@ -104,5 +107,23 @@ func Demo6() {
 	}
 	for i:=0;i<chanCap;i++{
 		fmt.Printf("%v\n",<-ch7)
+	}
+}
+
+func ClosureDemo() {
+	pos, neg := adder(), adder()
+	for i := 0; i < 10; i++ {
+		fmt.Println(
+			pos(i),
+			neg(-2*i),
+		)
+	}
+}
+
+func adder() func(int) int{
+	sum:=0
+	return func(x int)int {
+		sum+=x
+		return sum
 	}
 }
